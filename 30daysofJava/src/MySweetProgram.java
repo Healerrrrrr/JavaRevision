@@ -1,27 +1,26 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 
     public class MySweetProgram {
 
-        public static void main(String[] args) throws FileNotFoundException {
+        public static void main(String[] args) {
 
-            Scanner in = new Scanner(new File("Family.txt"));
 
-            List<String> family = new ArrayList<String>();
+            LinkedList<String> names = new LinkedList<String>();
+            names.push("Yacer");
+            names.push("Lamya");
+            names.push("Hammadi");
 
-            while(in.hasNextLine()){
-                family.add(in.nextLine());
-            }
+            System.out.println(names.remove());
+            System.out.println(names.remove());
+            System.out.println(names.remove());
 
-            for(int i =0; i<family.size(); i++){
-                System.out.println("name: " + family.get(i));
-            }
 
-            in.close();
 
 
         }
