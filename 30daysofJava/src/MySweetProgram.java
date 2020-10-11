@@ -1,12 +1,9 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
 
-
-    public class MySweetProgram {
+public class MySweetProgram {
 
         public static void main(String[] args) {
 
@@ -16,11 +13,14 @@ import java.util.Scanner;
             names.push("Lamya");
             names.push("Hammadi");
 
-            System.out.println(names.remove());
-            System.out.println(names.remove());
-            System.out.println(names.remove());
+            Iterator<String> it= names.iterator();
+            names.add(2, "Jiji");
 
+            for(String s: names){
+                System.out.println(s);
+            }
 
+        
 
 
         }
